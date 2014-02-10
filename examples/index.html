@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>Juilliard Web Development </title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage demo easing effect." />
+	<meta name="keywords"  content="Juilliard, web, improvements" />
+	<meta name="Resource-type" content="Document" />
+
+	
+	<link rel="stylesheet" type="text/css" href="../jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="demoPage.css" />
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+		
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>	
+	
+	<script type="text/javascript" src="../jquery.fullPage.js"></script>
+	<script type="text/javascript" src="examples.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var pepe = $.fn.fullpage({
+				slidesColor: ['#E44', '#F98262', '#6FA720', 'whitesmoke', '#ccddff'],
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+				menu: '#menu',
+				easing: 'easeOutExpo'
+			});
+			
+		});
+	</script>
+
+</head>
+<body>
+
+
+<select id="demosMenu">
+  <option id="background" selected>Choose Demo</option>
+  <option id="background">Background Images</option>
+  <option id="looping">Looping</option>
+  <option id="noAnchor">No anchor links</option>
+  <option id="scrollingSpeed">Scrolling speed</option>
+  <option id="easing">Easing</option>
+  <option id="callbacks">Callbacks</option>
+</select>
+
+
+<ul id="menu">
+	<li data-menuanchor="firstPage"><a href="#firstPage">My Juilliard</a></li>
+	<li data-menuanchor="secondPage"><a href="#secondPage">Admissions Blog</a></li>
+	<li data-menuanchor="3rdPage"><a href="#3rdPage">Online tickets| Spektrix</a></li>
+</ul>
+
+<div class="section " id="section0">
+	<h1>My Juilliard</h1>
+	<p>Configure the easing jQuery UI effect!</p>
+	<img src="imgs/fullPage.png" alt="fullPage" />
+</div>
+<div class="section" id="section1">
+	<div class="intro">
+		<i class="fa fa-html5"></i>
+		<h1>Admissions Blog</h1>
+		<p>This example is working with `easeOutExpo` effect instead of the default `easeOutExpo`</p>
+		<p>You can see more about them <a href="http://jqueryui.com/resources/demos/effect/easing.html" target="_blank">here</a></p>
+	</div>
+</div>
+<div class="section" id="section2">
+	<div class="intro">
+		<h1>Online tickets | Spektrix</h1>
+		<p>Choose the best easing effect for your site!</p>
+	</div>
+</div>
+
+
+
+</body>
+</html>
